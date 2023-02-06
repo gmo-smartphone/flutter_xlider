@@ -1,17 +1,7 @@
 /// A material design slider and range slider with horizontal and vertical axis, rtl support and lots of options and customizations for flutter
-
-/*
-* *
-* * Written by Ali Azmoude <ali.azmoude@gmail.com>
-* *
-* *
-* *
-* * When I wrote this, only God and I understood what I was doing.
-* * Now, God only knows "Karl Weierstrass"
-* */
+import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class FlutterSlider extends StatefulWidget {
   final Key? key;
@@ -439,7 +429,7 @@ class _FlutterSliderState extends State<FlutterSlider>
                 parent: _rightTooltipAnimationController,
                 curve: Curves.fastOutSlowIn));
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _renderBoxInitialization();
 
       _arrangeHandlersPosition();
